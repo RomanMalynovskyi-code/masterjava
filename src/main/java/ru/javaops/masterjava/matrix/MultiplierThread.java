@@ -3,16 +3,16 @@ package ru.javaops.masterjava.matrix;
 class MultiplierThread implements Runnable {
     private final int[][] firstMatrix;
     private final int[][] secondMatrix;
-    private int[][] resultMatrix;
-    private int firstIndex;
-    private int lastIndex;
+    private final int[][] resultMatrix;
+    private final int firstIndex;
+    private final int lastIndex;
     private final int sumLength;
 
     public MultiplierThread(final int[][] firstMatrix,
                             final int[][] secondMatrix,
                             final int[][] resultMatrix,
-                            int firstIndex,
-                            int lastIndex) {
+                            final int firstIndex,
+                            final int lastIndex) {
         this.firstMatrix = firstMatrix;
         this.secondMatrix = secondMatrix;
         this.resultMatrix = resultMatrix;

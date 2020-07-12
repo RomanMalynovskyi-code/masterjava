@@ -5,10 +5,6 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.*;
 
-/**
- * gkislin
- * 03.07.2016
- */
 public class MatrixUtil {
 
     // TODO implement parallel multiplication matrixA*matrixB
@@ -21,7 +17,7 @@ public class MatrixUtil {
         for (int i = 0; i < matrixSize; i++) {
             int lastIndex = firstIndex + 1;
             if (i == matrixSize - 1) {
-                lastIndex = matrixSize * matrixSize;
+                lastIndex = matrixSize;
             }
             futures.add(completionService.submit(new MultiplierThread(matrixA, matrixB, matrixC, firstIndex, lastIndex), null));
             firstIndex = lastIndex;
